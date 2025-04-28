@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="static/listarTarefa.css">
+</head>
+<body>
+
+    <h1>Lista de Tarefas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Tarefa</th>
+                <th>Descrição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+    </table>
+
+    <button id="openModal">Cadastrar Tarefa</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Cadastrar Tarefa</h2>
+            <form id="taskForm" onsubmit="addTask(event)">
+                <label for="taskName">Título da Tarefa:</label><br>
+                <input type="text" id="taskName" required><br><br>
+                <label for="taskDescription">Descrição:</label><br>
+                <textarea id="taskDescription" rows="4" required></textarea><br><br>
+                <button type="submit">Adicionar</button>
+            </form>
+        </div>
+    </div>
+    <script src="script/listarTarefa.js"></script>
+</body>
+</html>
